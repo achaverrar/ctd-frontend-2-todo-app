@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@300;400&family=Montserrat:wght@400;700&display=swap");
+
+:root {
+  --negro: #000000ff;
+  --oscuro: #1c1c1f;
+
+  --app-grey: #f2f2f2;
+  --azul: #3333ff;
+  --azul-hover: #2828c3;
+  --verde: #00cc7eff;
+  --rosa: #ff76e2ff;
+  --lila: #8a6df1ff;
+  --laranja: #ff6d57;
+  --laranja-hover: #d64d38;
+  --laranja-light: #ffc6bd;
+  --amarelo: #ffc51aff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Archivo", sans-serif;
+  font-weight: 300;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  color: white;
+}
+
+button {
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.rounded {
+  border-radius: 100vh;
+}
+
+.loader {
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 3px solid #fff;
+  border-right: 3px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+input.invalid {
+  border: 2px solid var(--laranja) !important;
+  background-color: var(--laranja-light) !important;
+}
+
+button .loader {
+  display: inline-block;
+  margin-right: 0.5em;
+}
+
+button:disabled i {
+  display: none;
+}
+
+.tareas-pendientes button:disabled .loader {
+  display: none !important;
+}
+
+.tareas-pendientes button:disabled i {
+  display: inline-block;
+}
+
+.tareas-terminadas button .loader {
+  margin-right: 0;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
